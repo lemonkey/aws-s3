@@ -34,7 +34,7 @@ class String
   else
     def previous!
       self[-1] = (self[-1].ord - 1).chr
-      self
+      self << 'z'
     end
   end
   

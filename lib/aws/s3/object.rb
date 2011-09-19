@@ -170,8 +170,8 @@ module AWS
           # If our heuristic failed, trigger a NoSuchKey exception
           if (object = bucket.objects.first) && object.key == key
             object 
-          else 
-            raise NoSuchKey.new("No such key `#{key}'", bucket)
+          else
+            raise NoSuchKey.new("No such key. '#{key}' was expected, but got '#{object.key}'. Previous was '#{key.previous}'.", bucket)
           end
         end
         
