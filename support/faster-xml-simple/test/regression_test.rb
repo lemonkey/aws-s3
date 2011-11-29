@@ -26,7 +26,7 @@ class RegressionTest < FasterXSTest
   end
 
   def test_empty_string_doesnt_crash
-    assert_raise(XML::Parser::ParseError) do
+    assert_raise(LibXML::XML::Parser::ParseError) do
       silence_stderr do 
         FasterXmlSimple.xml_in('')
       end

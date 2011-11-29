@@ -176,7 +176,7 @@ class FasterXmlSimple
       if string == ''
         string = ' '
       end
-      XML::Parser.string(string).parse
+      LibXML::XML::Parser.string(string).parse
     end
 end
 
